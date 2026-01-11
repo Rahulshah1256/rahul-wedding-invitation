@@ -1,0 +1,93 @@
+.image-slider {
+  position: relative;
+  /* remove extra vertical padding so true center is visible */
+  padding: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* occupy full viewport height for exact middle */
+}
+
+.slider-container {
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 600ms ease;
+}
+
+/* Prevent selection and basic drag actions */
+.image-slider, .slider-container, .slide {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.slide.active {
+  position: relative;
+  opacity: 1;
+}
+
+/* Keep nav buttons interactive */
+.slide {
+  pointer-events: none;
+}
+
+.nav, .dots, .dot {
+  pointer-events: auto;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.nav:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+.nav.prev { left: 8px; }
+.nav.next { right: 8px; }
+
+.dots {
+  position: absolute;
+  left: 50%;
+  bottom: 8px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.7);
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #fff;
+}
