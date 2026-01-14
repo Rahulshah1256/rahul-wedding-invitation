@@ -46,7 +46,7 @@ export default function ImageSlider() {
   const preventDrag = (e) => e.preventDefault();
 
   return (
-    <section className="image-slider" onContextMenu={preventContextMenu}>
+    <section className="image-slider" id="gallery" onContextMenu={preventContextMenu}>
       <div className="slider-container">
         {images.map((src, i) => (
           <img

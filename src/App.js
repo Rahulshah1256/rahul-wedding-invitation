@@ -10,20 +10,26 @@ import Invitation from './components/Invitation';
 import Weadingloaction from './components/Weadingloaction'
 import Contact from './components/Contact';
 import ImageSlider from './components/ImageSlider';
+import GoogleMapLocation from './components/GoogleMapLocation';
+import useScreenshotDeterrents from './useScreenshotDeterrents';
 
 function App() {
-  return (
-    <div className="App">
-      <Header />
-      <WeadingDate />
-      <CountDown />
-      <Invitation />
-      <ImageSlider />
-      <Weadingloaction />
-      <WeadingDetails />
-      <Contact />
-    </div>
-  );
+    useScreenshotDeterrents();
+
+    return (
+        <div className="App">
+            <Header/>
+            <WeadingDate/>
+            <CountDown/>
+            <Invitation/>
+            <ImageSlider/>
+            <Weadingloaction/>
+
+            <WeadingDetails/>
+            <GoogleMapLocation title="Venue Location" placeQuery="Tajpur Saraiya, Tetariya"/>
+            <Contact/>
+        </div>
+    );
 }
 
 export default App;

@@ -1,18 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../OurStory.css';
 import img3 from '../images/wedding3.jpeg'
 import img2 from '../images/wedding2.jpeg'
 import img1 from '../images/wedding1.jpeg'
+
 const WeadingDetails = () => {
+    const [showHindiPopupFirstMet, setShowHindiPopupFirstMet] = useState(false);
+    const [showHindiPopupFirstConversation, setShowHindiPopupFirstConversation] = useState(false);
+    const [showHindiPopupFirstDate, setShowHindiPopupFirstDate] = useState(false);
     return (
-        <section className="section w-details-area center-text">
+        <section className="section w-details-area center-text" id="story">
             <div className="container">
                 <div className="row">
                     <div className="col-sm-12">
                         <div className="heading">
                             <span>We Love Each Other</span>
                             <h2 className="title">Our Story</h2>
-                            <p>To love a person is to see all of their magic, and to remind them of it when they have forgotten.</p>
+                            <p>To love a person is to see all of their magic, and to remind them of it when they have
+                                forgotten.</p>
                             <p>Ah, life grows lovely where you are.</p>
                             <span className="heading-bottom"><i className="icon icon-star"></i></span>
                         </div>
@@ -24,10 +29,69 @@ const WeadingDetails = () => {
                                 <div className="timeline-panel">
                                     <div className="timeline-heading">
                                         <h3 className="timeline-title">First We Met</h3>
-                                        <span className="date">December 25, 2018</span>
+                                        <span className="date">October 25, 2020</span>
                                     </div>
                                     <div className="timeline-body">
-                                        <p>After four hours of long drive we met in her home with full of family members, fall in love with each other.</p>
+                                        <p>We first crossed paths on the auspicious day of Navami in 2020. My cousin had
+                                            taken me to her place for a visit, and I had no idea that an ordinary
+                                            evening was about to become so special. When she walked in with tea, she saw
+                                            me for the first time. But me? I was so lost in my phone that I didn't even
+                                            realize my destiny was standing right in front of me. That day, it was a
+                                            one-sided meeting—she saw me, but I didn't see her.</p>
+                                        <button
+                                            type="button"
+                                            className="btn btn-primary"
+                                            onClick={() => setShowHindiPopupFirstMet(true)}
+                                        >
+                                            Read in Hindi
+                                        </button>
+                                        {showHindiPopupFirstMet && (
+                                            <div
+                                                style={{
+                                                    position: 'fixed',
+                                                    top: 0,
+                                                    left: 0,
+                                                    right: 0,
+                                                    bottom: 0,
+                                                    background: 'rgba(0,0,0,0.5)',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    zIndex: 9999
+                                                }}
+                                            >
+                                                <div
+                                                    style={{
+                                                        background: '#fff',
+                                                        padding: '20px',
+                                                        maxWidth: '600px',
+                                                        width: '90%',
+                                                        borderRadius: '6px',
+                                                        boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
+                                                    }}
+                                                >
+                                                    <h4 style={{marginTop: 0}}>Pehli Mulakaat</h4>
+                                                    <p>
+                                                        Hum pehli baar Durga Puja 2020 ki Navami par mile. Mere Mama ka
+                                                        beta mujhe unke ghar ghumane le gaya tha. Mujhe andaza bhi nahi
+                                                        tha ki wo shaam mere liye itni khaas ban jayegi.
+                                                    </p>
+                                                    <p>
+                                                        Jab woh chai lekar aayi, toh usne mujhe pehli baar dekha. Par
+                                                        main? Main toh apne phone mein itna khoya hua tha ki mujhe pata
+                                                        hi nahi chala ki meri kismat mere theek saamne khadi hai. Uss
+                                                        din bas usne mujhe dekha tha, par maine use nahi.
+                                                    </p>
+                                                    <button
+                                                        type="button"
+                                                        className="btn btn-default"
+                                                        onClick={() => setShowHindiPopupFirstMet(false)}
+                                                    >
+                                                        Close
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             </li>
@@ -35,11 +99,79 @@ const WeadingDetails = () => {
                                 <div className="timeline-badge" style={{backgroundImage: `url(${img2})`}}></div>
                                 <div className="timeline-panel">
                                     <div className="timeline-heading">
-                                        <h3 className="timeline-title">First Date</h3>
-                                        <span className="date"><i className="icon icon-date"></i>December 30, 2018</span>
+                                        <h3 className="timeline-title">The First Conversation</h3>
+                                        <span className="date"><i className="icon icon-date"></i>October 30, 2022</span>
                                     </div>
                                     <div className="timeline-body">
-                                        <p>Came to her home with excitement to meet her again. Our first date. She kisses my hand and I gave her red roses and chocolate.</p>
+                                        <p>Chhath Puja 2022: A Digital Connection
+
+                                            It was during Chhath Puja in 2022. Her mother is my friend on Facebook and
+                                            had posted a status with her picture. The moment I saw that photo, I felt an
+                                            unexplainable connection.
+                                        </p><p>
+                                        I gathered some sudden courage and messaged her mother's account directly. To my
+                                        surprise, I found out later that it wasn't her mother replying—it was her! That
+                                        accidental conversation sparked everything. She confessed that she had liked me
+                                        for a long time, and just like that, our journey began. </p>
+
+                                        <button
+                                            type="button"
+                                            className="btn btn-primary"
+                                            onClick={() => setShowHindiPopupFirstConversation(true)}
+                                        >
+                                            Read in Hindi
+                                        </button>
+                                        {showHindiPopupFirstConversation && (
+                                            <div
+                                                style={{
+                                                    position: 'fixed',
+                                                    top: 0,
+                                                    left: 0,
+                                                    right: 0,
+                                                    bottom: 0,
+                                                    background: 'rgba(0,0,0,0.5)',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    zIndex: 9999
+                                                }}
+                                            >
+                                                <div
+                                                    style={{
+                                                        background: '#fff',
+                                                        padding: '20px',
+                                                        maxWidth: '600px',
+                                                        width: '90%',
+                                                        borderRadius: '6px',
+                                                        boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
+                                                    }}
+                                                >
+                                                    <h4 style={{marginTop: 0}}>Pehli Baatcheet</h4>
+                                                    <p>
+                                                        Yeh Chhath Puja 2022 ki baat hai. Uski mummy meri Facebook
+                                                        friend hain, aur uss din unhone status pe uski ek photo lagayi
+                                                        thi. Wo photo dekhkar mujhe aisa laga jaise humare beech koi
+                                                        gehra connection hai.
+
+                                                    </p>
+                                                    <p>
+
+                                                        Pata nahi kahan se mujhme itni himmat aa gayi ki maine seedha
+                                                        uski mummy ke account pe message kar diya! Baad mein pata chala
+                                                        ki wo mummy nahi, balki wo khud reply kar rahi thi. Bas, wahin
+                                                        se humari baatein shuru huin aur usne bataya ki wo mujhe bohot
+                                                        pehle se pasand karti thi. Aur aise humari kahani shuru
+                                                        hui. </p>
+                                                    <button
+                                                        type="button"
+                                                        className="btn btn-default"
+                                                        onClick={() => setShowHindiPopupFirstConversation(false)}
+                                                    >
+                                                        Close
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             </li>
@@ -47,11 +179,67 @@ const WeadingDetails = () => {
                                 <div className="timeline-badge" style={{backgroundImage: `url(${img3})`}}></div>
                                 <div className="timeline-panel">
                                     <div className="timeline-heading">
-                                        <h3 className="timeline-title">In A Relationship</h3>
-                                        <span className="date">May 16, 2019</span>
+                                        <h3 className="timeline-title">The First Date</h3>
+                                        <span className="date">March 17, 2023</span>
                                     </div>
                                     <div className="timeline-body">
-                                        <p>It's our engagement time. We started new relationship.</p>
+                                        <p>It was March 17, 2023, just one day before my birthday. We went on our very
+                                            first official date to the London Bridge Restaurant.
+                                        </p><p>
+                                        She surprised me by celebrating my pre-birthday there. We had lunch and spent
+                                        hours just talking. It was the perfect start to another year of my life, and the
+                                        beginning of many more dates to come.</p>
+                                        <button
+                                            type="button"
+                                            className="btn btn-primary"
+                                            onClick={() => setShowHindiPopupFirstDate(true)}
+                                        >
+                                            Read in Hindi
+                                        </button>
+                                        {showHindiPopupFirstDate && (
+                                            <div
+                                                style={{
+                                                    position: 'fixed',
+                                                    top: 0,
+                                                    left: 0,
+                                                    right: 0,
+                                                    bottom: 0,
+                                                    background: 'rgba(0,0,0,0.5)',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    zIndex: 9999
+                                                }}
+                                            >
+                                                <div
+                                                    style={{
+                                                        background: '#fff',
+                                                        padding: '20px',
+                                                        maxWidth: '600px',
+                                                        width: '90%',
+                                                        borderRadius: '6px',
+                                                        boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
+                                                    }}
+                                                >
+                                                    <h4 style={{marginTop: 0}}>Hamari Pehli Date</h4>
+                                                    <p>
+                                                        Yeh 17 March 2023, mere birthday se theek ek din pehle ki baat
+                                                        hai. Hum pehli baar official date par London Bridge Restaurant
+                                                        gaye thay. </p>
+                                                    <p>
+                                                        Usne wahan mera pre-birthday celebrate kiya, humne saath lunch
+                                                        kiya aur dher saari baatein ki. Wo pehli mulakaat aur wo baatein
+                                                        humesha yaadgar rahengi. </p>
+                                                    <button
+                                                        type="button"
+                                                        className="btn btn-default"
+                                                        onClick={() => setShowHindiPopupFirstDate(false)}
+                                                    >
+                                                        Close
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             </li>

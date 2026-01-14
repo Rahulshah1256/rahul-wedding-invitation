@@ -1,10 +1,10 @@
 import React from 'react';
-import groom from '../images/wedding1.jpeg';
-import bride from '../images/wedding2.jpeg';
+import groom from '../images/rahul.jpg';
+import bride from '../images/sujata.png';
 import brideback from '../images/brideback.jpg';
 const Invitation = () => {
     return (
-        <section className="section w-details-area center-text">
+        <section className="section w-details-area center-text" id="invitation">
             <div className="container">
                 <div className="row">
                     <div className="col-sm-1"></div>

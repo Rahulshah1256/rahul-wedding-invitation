@@ -16,7 +16,7 @@ const WeadingDate = () => {
     const prettyWithSuffix = pretty.replace(String(day), `${day}${suffix}`);
 
     return (
-        <div className="main-slider">
+        <div className="main-slider" id="home">
             <div className="display-table center-text">
                 <div className="display-table-cell">
                     <div className="slider-content">
