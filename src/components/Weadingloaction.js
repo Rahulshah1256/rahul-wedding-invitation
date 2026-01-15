@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import '../OurStory.css';
 import img1 from '../images/chheka.jpeg';
 import img2 from '../images/wedding2.jpeg';
@@ -7,6 +7,54 @@ import mehendi1 from '../images/mehendi1.jpeg';
 import haldiImg from '../images/haldi.jpeg';
 
 const Weadingloaction = () => {
+    const ceremonies = useMemo(() => ([
+        {
+            key: 'chheka',
+            inverted: true,
+            image: img1,
+            title: 'Chheka(Tilak)',
+            date: 'Monday, 23rd February 2026',
+            time: '12:00 PM onwards',
+            venue: 'Tajpur Saraiya, Tetariya',
+        },
+        {
+            key: 'matkor',
+            inverted: false,
+            image: img3,
+            title: 'Puja Matkor',
+            date: 'Tuesday, 24th February 2026',
+            time: '6:00 PM onwards',
+            venue: 'Paigambarpur, Muzaffarpur',
+        },
+        {
+            key: 'haldi',
+            inverted: true,
+            image: haldiImg,
+            title: 'Haldi',
+            date: 'Tuesday, 24th February 2026',
+            time: '7:00 PM onwards',
+            venue: 'Paigambarpur, Muzaffarpur',
+        },
+        {
+            key: 'mehendi',
+            inverted: false,
+            image: mehendi1,
+            title: 'Mehendi',
+            date: 'Tuesday, 24th February 2026',
+            time: '8:00 PM onwards',
+            venue: 'Paigambarpur, Muzaffarpur',
+        },
+        {
+            key: 'wedding',
+            inverted: true,
+            image: img2,
+            title: 'Wedding',
+            date: 'Wednesday, 25th February 2026',
+            time: '8:00 PM onwards',
+            venue: 'Tajpur Saraiya, Tetariya',
+        },
+    ]), []);
+
     return (
         <section className="section w-details-area center-text" id="ceremony">
             <div className="container">
@@ -20,78 +68,24 @@ const Weadingloaction = () => {
 
                     <div className="col-md-12 col-md-offset-0">
                         <ul className="timeline animate-box fadeInUp animated-fast">
-                            {/* Chheka: put details on the RIGHT to avoid overlapping the badge */}
-                            <li className="timeline-inverted animate-box fadeInUp animated-fast">
-                                <div className="timeline-badge" style={{ backgroundImage: `url(${img1})` }}></div>
-                                <div className="timeline-panel">
-                                    <div className="timeline-heading">
-                                        <h3 className="timeline-title">Chheka(Tilak)</h3>
-                                        <span className="date">Monday, 23rd February 2026</span>
+                            {ceremonies.map((c) => (
+                                <li
+                                    key={c.key}
+                                    className={`${c.inverted ? 'timeline-inverted ' : ''}animate-box fadeInUp animated-fast`}
+                                >
+                                    <div className="timeline-badge" style={{ backgroundImage: `url(${c.image})` }}></div>
+                                    <div className="timeline-panel">
+                                        <div className="timeline-heading">
+                                            <h3 className="timeline-title">{c.title}</h3>
+                                            <span className="date">{c.date}</span>
+                                        </div>
+                                        <div className="timeline-body">
+                                            <p>Time: {c.time}</p>
+                                            <p>Venue: {c.venue}</p>
+                                        </div>
                                     </div>
-                                    <div className="timeline-body">
-                                        <p>Time: 12:00 PM onwards</p>
-                                        <p>Venue: Tajpur Saraiya, Tetariya</p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li className="animate-box fadeInUp animated-fast">
-                                <div className="timeline-badge" style={{ backgroundImage: `url(${img3})` }}></div>
-                                <div className="timeline-panel">
-                                    <div className="timeline-heading">
-                                        <h3 className="timeline-title">Puja Matkor</h3>
-                                        <span className="date">Tuesday, 24th February 2026</span>
-                                    </div>
-                                    <div className="timeline-body">
-                                        <p>Time: 6:00 PM onwards</p>
-                                        <p>Venue: Paigambarpur, Muzaffarpur</p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            {/* Haldi */}
-                            <li className="timeline-inverted animate-box fadeInUp animated-fast">
-                                <div className="timeline-badge" style={{ backgroundImage: `url(${haldiImg})` }}></div>
-                                <div className="timeline-panel">
-                                    <div className="timeline-heading">
-                                        <h3 className="timeline-title">Haldi</h3>
-                                        <span className="date">Tuesday, 24th February 2026</span>
-                                    </div>
-                                    <div className="timeline-body">
-                                        <p>Time: 7:00 PM onwards</p>
-                                        <p>Venue: Paigambarpur, Muzaffarpur</p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li className="animate-box fadeInUp animated-fast">
-                                <div className="timeline-badge" style={{ backgroundImage: `url(${mehendi1})` }}></div>
-                                <div className="timeline-panel">
-                                    <div className="timeline-heading">
-                                        <h3 className="timeline-title">Mehendi</h3>
-                                        <span className="date">Tuesday, 24th February 2026</span>
-                                    </div>
-                                    <div className="timeline-body">
-                                        <p>Time: 8:00 PM onwards</p>
-                                        <p>Venue: Paigambarpur, Muzaffarpur</p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            {/* Wedding */}
-                            <li className="timeline-inverted animate-box fadeInUp animated-fast">
-                                <div className="timeline-badge" style={{ backgroundImage: `url(${img2})` }}></div>
-                                <div className="timeline-panel">
-                                    <div className="timeline-heading">
-                                        <h3 className="timeline-title">Wedding</h3>
-                                        <span className="date">Wednesday, 25th February 2026</span>
-                                    </div>
-                                    <div className="timeline-body">
-                                        <p>Time: 8:00 PM onwards</p>
-                                        <p>Venue: Tajpur Saraiya, Tetariya</p>
-                                    </div>
-                                </div>
-                            </li>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>
