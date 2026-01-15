@@ -1,3 +1,82 @@
 .sindur-dan {
     width: 120px !important;
 }
+
+/* Modern hero (no box) */
+.saveDate-card {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.saveDate-top {
+    display: flex;
+    justify-content: center;
+}
+
+.saveDate-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 12px;
+    color: #fff;
+    background: linear-gradient(135deg, rgba(228, 95, 116, 0.98), rgba(241, 78, 149, 0.98));
+    box-shadow: 0 14px 30px rgba(241, 78, 149, 0.25);
+}
+
+.saveDate-mid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.saveDate-date {
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.saveDate-names {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.saveDate-name {
+    font-family: 'Playball', cursive;
+    font-size: clamp(44px, 6vw, 76px);
+    line-height: 1;
+    color: #fff;
+    text-shadow: 0 14px 34px rgba(0, 0, 0, 0.4);
+}
+
+.saveDate-hand {
+    width: 58px;
+    height: auto;
+    filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.25));
+}
+
+@media (max-width: 480px) {
+    .saveDate-hand {
+        width: 46px;
+    }
+}

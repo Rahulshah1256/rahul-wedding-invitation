@@ -25,7 +25,7 @@ const Weadingloaction = () => {
                                 <div className="timeline-badge" style={{ backgroundImage: `url(${img1})` }}></div>
                                 <div className="timeline-panel">
                                     <div className="timeline-heading">
-                                        <h3 className="timeline-title">Chheka(Tilak) Ceremony</h3>
+                                        <h3 className="timeline-title">Chheka(Tilak)</h3>
                                         <span className="date">Monday, 23rd February 2026</span>
                                     </div>
                                     <div className="timeline-body">
@@ -39,7 +39,7 @@ const Weadingloaction = () => {
                                 <div className="timeline-badge" style={{ backgroundImage: `url(${img3})` }}></div>
                                 <div className="timeline-panel">
                                     <div className="timeline-heading">
-                                        <h3 className="timeline-title">Puja Mathkor</h3>
+                                        <h3 className="timeline-title">Puja Matkor</h3>
                                         <span className="date">Tuesday, 24th February 2026</span>
                                     </div>
                                     <div className="timeline-body">
@@ -54,7 +54,7 @@ const Weadingloaction = () => {
                                 <div className="timeline-badge" style={{ backgroundImage: `url(${haldiImg})` }}></div>
                                 <div className="timeline-panel">
                                     <div className="timeline-heading">
-                                        <h3 className="timeline-title">Haldi Ceremony</h3>
+                                        <h3 className="timeline-title">Haldi</h3>
                                         <span className="date">Tuesday, 24th February 2026</span>
                                     </div>
                                     <div className="timeline-body">
@@ -68,7 +68,7 @@ const Weadingloaction = () => {
                                 <div className="timeline-badge" style={{ backgroundImage: `url(${mehendi1})` }}></div>
                                 <div className="timeline-panel">
                                     <div className="timeline-heading">
-                                        <h3 className="timeline-title">Mehendi Ceremony</h3>
+                                        <h3 className="timeline-title">Mehendi</h3>
                                         <span className="date">Tuesday, 24th February 2026</span>
                                     </div>
                                     <div className="timeline-body">
@@ -83,7 +83,7 @@ const Weadingloaction = () => {
                                 <div className="timeline-badge" style={{ backgroundImage: `url(${img2})` }}></div>
                                 <div className="timeline-panel">
                                     <div className="timeline-heading">
-                                        <h3 className="timeline-title">Wedding Ceremony</h3>
+                                        <h3 className="timeline-title">Wedding</h3>
                                         <span className="date">Wednesday, 25th February 2026</span>
                                     </div>
                                     <div className="timeline-body">

@@ -1,0 +1,138 @@
+.hindi-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(228, 95, 116, 0.35);
+  background: rgba(255, 255, 255, 0.75);
+  color: #2b2b2b;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.hindi-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.hindi-btn:active {
+  transform: translateY(0);
+}
+
+.hindi-btn__pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 26px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  background: linear-gradient(135deg, #E45F74, #F14E95);
+  color: #fff;
+}
+
+.hindi-modal__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.55);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 24px;
+}
+
+.hindi-modal {
+  width: min(720px, 100%);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 18px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transform-origin: 50% 50%;
+  animation: hindiModalPop 160ms ease-out;
+}
+
+@keyframes hindiModalPop {
+  from {
+    transform: translateY(6px) scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.hindi-modal__header {
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: linear-gradient(135deg, rgba(228, 95, 116, 0.10), rgba(241, 78, 149, 0.10));
+}
+
+.hindi-modal__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f1f1f;
+}
+
+.hindi-modal__close {
+  height: 36px;
+  width: 36px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.8);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.hindi-modal__close:hover {
+  transform: scale(1.03);
+  background: #fff;
+}
+
+.hindi-modal__body {
+  padding: 16px 18px 18px;
+  max-height: min(70vh, 520px);
+  overflow: auto;
+}
+
+.hindi-modal__body p {
+  margin: 0 0 12px;
+  white-space: pre-line;
+}
+
+.hindi-modal__footer {
+  padding: 14px 18px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hindi-modal__closeBtn {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(228, 95, 116, 0.35);
+  background: linear-gradient(135deg, #E45F74, #F14E95);
+  color: white;
+  font-weight: 600;
+  transition: transform 160ms ease, filter 160ms ease;
+}
+
+.hindi-modal__closeBtn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+}
+

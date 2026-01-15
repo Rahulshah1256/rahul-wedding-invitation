@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import '../OurStory.css';
+import HindiStoryModal from './HindiStoryModal';
+import './HindiStoryModal.css';
 import img3 from '../images/wedding3.jpeg'
 import img2 from '../images/wedding2.jpeg'
 import img1 from '../images/wedding1.jpeg'
@@ -40,58 +42,30 @@ const WeadingDetails = () => {
                                             one-sided meeting—she saw me, but I didn't see her.</p>
                                         <button
                                             type="button"
-                                            className="btn btn-primary"
+                                            className="hindi-btn"
                                             onClick={() => setShowHindiPopupFirstMet(true)}
                                         >
-                                            Read in Hindi
+                                            <span className="hindi-btn__pill">Hindi</span>
+                                            <span>Read in Hindi</span>
                                         </button>
-                                        {showHindiPopupFirstMet && (
-                                            <div
-                                                style={{
-                                                    position: 'fixed',
-                                                    top: 0,
-                                                    left: 0,
-                                                    right: 0,
-                                                    bottom: 0,
-                                                    background: 'rgba(0,0,0,0.5)',
-                                                    display: 'flex',
-                                                    alignItems: 'center',
-                                                    justifyContent: 'center',
-                                                    zIndex: 9999
-                                                }}
-                                            >
-                                                <div
-                                                    style={{
-                                                        background: '#fff',
-                                                        padding: '20px',
-                                                        maxWidth: '600px',
-                                                        width: '90%',
-                                                        borderRadius: '6px',
-                                                        boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
-                                                    }}
-                                                >
-                                                    <h4 style={{marginTop: 0}}>Pehli Mulakaat</h4>
-                                                    <p>
-                                                        Hum pehli baar Durga Puja 2020 ki Navami par mile. Mere Mama ka
-                                                        beta mujhe unke ghar ghumane le gaya tha. Mujhe andaza bhi nahi
-                                                        tha ki wo shaam mere liye itni khaas ban jayegi.
-                                                    </p>
-                                                    <p>
-                                                        Jab woh chai lekar aayi, toh usne mujhe pehli baar dekha. Par
-                                                        main? Main toh apne phone mein itna khoya hua tha ki mujhe pata
-                                                        hi nahi chala ki meri kismat mere theek saamne khadi hai. Uss
-                                                        din bas usne mujhe dekha tha, par maine use nahi.
-                                                    </p>
-                                                    <button
-                                                        type="button"
-                                                        className="btn btn-default"
-                                                        onClick={() => setShowHindiPopupFirstMet(false)}
-                                                    >
-                                                        Close
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        )}
+
+                                        <HindiStoryModal
+                                            open={showHindiPopupFirstMet}
+                                            title="Pehli Mulakaat"
+                                            onClose={() => setShowHindiPopupFirstMet(false)}
+                                        >
+                                            <p>
+                                                Hum pehli baar Durga Puja 2020 ki Navami par mile. Mere Mama ka
+                                                beta mujhe unke ghar ghumane le gaya tha. Mujhe andaza bhi nahi
+                                                tha ki wo shaam mere liye itni khaas ban jayegi.
+                                            </p>
+                                            <p>
+                                                Jab woh chai lekar aayi, toh usne mujhe pehli baar dekha. Par
+                                                main? Main toh apne phone mein itna khoya hua tha ki mujhe pata
+                                                hi nahi chala ki meri kismat mere theek saamne khadi hai. Uss
+                                                din bas usne mujhe dekha tha, par maine use nahi.
+                                            </p>
+                                        </HindiStoryModal>
                                     </div>
                                 </div>
                             </li>
@@ -116,62 +90,35 @@ const WeadingDetails = () => {
 
                                         <button
                                             type="button"
-                                            className="btn btn-primary"
+                                            className="hindi-btn"
                                             onClick={() => setShowHindiPopupFirstConversation(true)}
                                         >
-                                            Read in Hindi
+                                            <span className="hindi-btn__pill">Hindi</span>
+                                            <span>Read in Hindi</span>
                                         </button>
-                                        {showHindiPopupFirstConversation && (
-                                            <div
-                                                style={{
-                                                    position: 'fixed',
-                                                    top: 0,
-                                                    left: 0,
-                                                    right: 0,
-                                                    bottom: 0,
-                                                    background: 'rgba(0,0,0,0.5)',
-                                                    display: 'flex',
-                                                    alignItems: 'center',
-                                                    justifyContent: 'center',
-                                                    zIndex: 9999
-                                                }}
-                                            >
-                                                <div
-                                                    style={{
-                                                        background: '#fff',
-                                                        padding: '20px',
-                                                        maxWidth: '600px',
-                                                        width: '90%',
-                                                        borderRadius: '6px',
-                                                        boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
-                                                    }}
-                                                >
-                                                    <h4 style={{marginTop: 0}}>Pehli Baatcheet</h4>
-                                                    <p>
-                                                        Yeh Chhath Puja 2022 ki baat hai. Uski mummy meri Facebook
-                                                        friend hain, aur uss din unhone status pe uski ek photo lagayi
-                                                        thi. Wo photo dekhkar mujhe aisa laga jaise humare beech koi
-                                                        gehra connection hai.
 
-                                                    </p>
-                                                    <p>
+                                        <HindiStoryModal
+                                            open={showHindiPopupFirstConversation}
+                                            title="Pehli Baatcheet"
+                                            onClose={() => setShowHindiPopupFirstConversation(false)}
+                                        >
+                                            <p>
+                                                Yeh Chhath Puja 2022 ki baat hai. Uski mummy meri Facebook
+                                                friend hain, aur uss din unhone status pe uski ek photo lagayi
+                                                thi. Wo photo dekhkar mujhe aisa laga jaise humare beech koi
+                                                gehra connection hai.
 
-                                                        Pata nahi kahan se mujhme itni himmat aa gayi ki maine seedha
-                                                        uski mummy ke account pe message kar diya! Baad mein pata chala
-                                                        ki wo mummy nahi, balki wo khud reply kar rahi thi. Bas, wahin
-                                                        se humari baatein shuru huin aur usne bataya ki wo mujhe bohot
-                                                        pehle se pasand karti thi. Aur aise humari kahani shuru
-                                                        hui. </p>
-                                                    <button
-                                                        type="button"
-                                                        className="btn btn-default"
-                                                        onClick={() => setShowHindiPopupFirstConversation(false)}
-                                                    >
-                                                        Close
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        )}
+                                            </p>
+                                            <p>
+
+                                                Pata nahi kahan se mujhme itni himmat aa gayi ki maine seedha
+                                                uski mummy ke account pe message kar diya! Baad mein pata chala
+                                                ki wo mummy nahi, balki wo khud reply kar rahi thi. Bas, wahin
+                                                se humari baatein shuru huin aur usne bataya ki wo mujhe bohot
+                                                pehle se pasand karti thi. Aur aise humari kahani shuru
+                                                hui.
+                                            </p>
+                                        </HindiStoryModal>
                                     </div>
                                 </div>
                             </li>
@@ -191,55 +138,29 @@ const WeadingDetails = () => {
                                         beginning of many more dates to come.</p>
                                         <button
                                             type="button"
-                                            className="btn btn-primary"
+                                            className="hindi-btn"
                                             onClick={() => setShowHindiPopupFirstDate(true)}
                                         >
-                                            Read in Hindi
+                                            <span className="hindi-btn__pill">Hindi</span>
+                                            <span>Read in Hindi</span>
                                         </button>
-                                        {showHindiPopupFirstDate && (
-                                            <div
-                                                style={{
-                                                    position: 'fixed',
-                                                    top: 0,
-                                                    left: 0,
-                                                    right: 0,
-                                                    bottom: 0,
-                                                    background: 'rgba(0,0,0,0.5)',
-                                                    display: 'flex',
-                                                    alignItems: 'center',
-                                                    justifyContent: 'center',
-                                                    zIndex: 9999
-                                                }}
-                                            >
-                                                <div
-                                                    style={{
-                                                        background: '#fff',
-                                                        padding: '20px',
-                                                        maxWidth: '600px',
-                                                        width: '90%',
-                                                        borderRadius: '6px',
-                                                        boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
-                                                    }}
-                                                >
-                                                    <h4 style={{marginTop: 0}}>Hamari Pehli Date</h4>
-                                                    <p>
-                                                        Yeh 17 March 2023, mere birthday se theek ek din pehle ki baat
-                                                        hai. Hum pehli baar official date par London Bridge Restaurant
-                                                        gaye thay. </p>
-                                                    <p>
-                                                        Usne wahan mera pre-birthday celebrate kiya, humne saath lunch
-                                                        kiya aur dher saari baatein ki. Wo pehli mulakaat aur wo baatein
-                                                        humesha yaadgar rahengi. </p>
-                                                    <button
-                                                        type="button"
-                                                        className="btn btn-default"
-                                                        onClick={() => setShowHindiPopupFirstDate(false)}
-                                                    >
-                                                        Close
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        )}
+
+                                        <HindiStoryModal
+                                            open={showHindiPopupFirstDate}
+                                            title="Hamari Pehli Date"
+                                            onClose={() => setShowHindiPopupFirstDate(false)}
+                                        >
+                                            <p>
+                                                Yeh 17 March 2023, mere birthday se theek ek din pehle ki baat
+                                                hai. Hum pehli baar official date par London Bridge Restaurant
+                                                gaye thay.
+                                            </p>
+                                            <p>
+                                                Usne wahan mera pre-birthday celebrate kiya, humne saath lunch
+                                                kiya aur dher saari baatein ki. Wo pehli mulakaat aur wo baatein
+                                                humesha yaadgar rahengi.
+                                            </p>
+                                        </HindiStoryModal>
                                     </div>
                                 </div>
                             </li>

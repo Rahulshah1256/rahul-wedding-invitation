@@ -20,12 +20,24 @@ const WeadingDate = () => {
             <div className="display-table center-text">
                 <div className="display-table-cell">
                     <div className="slider-content">
+                        <div className="saveDate-card">
+                            <div className="saveDate-top">
+                                <img className="sindur-dan" src={sindurdan} alt="Sindur Dan"/>
+                            </div>
 
-                        <img className="sindur-dan" src={sindurdan} alt="Sindur Dan"/>
-                        <h5 className="date">{prettyWithSuffix}</h5>
-                        <h3 className="pre-title">Save The Date</h3>
-                        <h1 className="title">Rahul   <img className="sindur-dan" src={hand} alt="Sindur Dan"/> Sujata</h1>
+                            <div className="saveDate-mid">
+                                <div className="saveDate-badge">Save the Date</div>
+                                <h5 className="date saveDate-date">{prettyWithSuffix}</h5>
+                            </div>
 
+                            <div className="saveDate-names" aria-label="Couple names">
+                                <span className="saveDate-name">Rahul</span>
+                                <span className="saveDate-sep" aria-hidden="true">
+                                    <img className="saveDate-hand" src={hand} alt=""/>
+                                </span>
+                                <span className="saveDate-name">Sujata</span>
+                            </div>
+                        </div>
                     </div>
 			</div>
 		</div>
