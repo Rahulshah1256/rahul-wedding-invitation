@@ -23,7 +23,7 @@ const Invitation = () => {
                                 </div>
                                 <div className="desc-groom">
                                     <h3>Rahul</h3>
-                                    <h5>S/O Sitaram Sah</h5>
+                                    <h5>S/o Sitaram Sah</h5>
                                     <h5>Sobha Devi</h5>
                                 </div>
                             </div>
@@ -38,7 +38,7 @@ const Invitation = () => {
                                 </div>
                                 <div className="desc-bride">
                                     <h3>Sujata</h3>
-                                    <h5>D/O Kamal Sah</h5>
+                                    <h5>D/o Kamal Sah</h5>
                                     <h5>Anita Devi</h5>
                                 </div>
                             </div>

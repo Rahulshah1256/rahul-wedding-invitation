@@ -23,7 +23,10 @@ function App() {
             <Weadingloaction/>
 
             <WeadingDetails/>
-            <GoogleMapLocation title="Venue Location" placeQuery="Tajpur Saraiya, Tetariya"/>
+            <GoogleMapLocation
+              title="Venue Location"
+              coords={{ lat: 26.3828917, lng: 85.1791921 }}
+            />
             <Contact/>
         </div>
     );

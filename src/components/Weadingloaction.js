@@ -9,16 +9,28 @@ import haldiImg from '../images/haldi.jpeg';
 const Weadingloaction = () => {
     const ceremonies = useMemo(() => ([
         {
-            key: 'chheka',
-            inverted: true,
+            key: 'cheka',
+            // left
+            inverted: false,
             image: img1,
-            title: 'Chheka(Tilak)',
+            title: 'Cheka',
             date: 'Monday, 23rd February 2026',
             time: '12:00 PM onwards',
-            venue: 'Tajpur Saraiya, Tetariya',
+            venue: 'Tajpur Saraiya, Tetaria',
+        },
+        {
+            key: 'mehendi',
+            // right
+            inverted: true,
+            image: mehendi1,
+            title: 'Mehendi',
+            date: 'Tuesday, 23rd February 2026',
+            time: '7:00 PM onwards',
+            venue: 'Paigambarpur, Muzaffarpur',
         },
         {
             key: 'matkor',
+            // left
             inverted: false,
             image: img3,
             title: 'Puja Matkor',
@@ -28,6 +40,7 @@ const Weadingloaction = () => {
         },
         {
             key: 'haldi',
+            // right
             inverted: true,
             image: haldiImg,
             title: 'Haldi',
@@ -36,21 +49,13 @@ const Weadingloaction = () => {
             venue: 'Paigambarpur, Muzaffarpur',
         },
         {
-            key: 'mehendi',
-            inverted: false,
-            image: mehendi1,
-            title: 'Mehendi',
-            date: 'Tuesday, 24th February 2026',
-            time: '8:00 PM onwards',
-            venue: 'Paigambarpur, Muzaffarpur',
-        },
-        {
             key: 'wedding',
-            inverted: true,
+            // left
+            inverted: false,
             image: img2,
             title: 'Wedding',
             date: 'Wednesday, 25th February 2026',
-            time: '8:00 PM onwards',
+            time: '6:00 PM onwards',
             venue: 'Tajpur Saraiya, Tetariya',
         },
     ]), []);
