@@ -9,7 +9,7 @@ import sliding8 from '../images/sliding/sliding8.jpg';
 import sliding14 from '../images/sliding/sliding14.jpg';
 //import matkor from '../images/sliding/matkor.jpeg';
 import wedding1 from '../images/sliding/wedding1.jpeg';
-import wedding2 from '../images/sliding/wedding2.jpeg';
+//import wedding2 from '../images/sliding/wedding2.jpeg';
 //import wedding3 from '../images/sliding/wedding3.jpeg';
 import sliding20 from '../images/sliding/sliding20.jpeg';
 import sliding22 from '../images/sliding/sliding22.jpeg';
