@@ -52,7 +52,7 @@ const WeadingDetails = () => {
             english: (
                 <>
                     <p>
-                        Chhath Puja 2022: A Digital Connection
+                        Chath Puja 2022: A Digital Connection
 
                         It was during Chhath Puja in 2022. Her mother is my friend on Facebook and
                         had posted a status with her picture. The moment I saw that photo, I felt an
@@ -70,7 +70,7 @@ const WeadingDetails = () => {
             hindi: (
                 <>
                     <p>
-                        Yeh Chhath Puja 2022 ki baat hai. Uski mummy meri Facebook
+                        Yeh Chath Puja 2022 ki baat hai. Uski mummy meri Facebook
                         friend hain, aur uss din unhone status pe uski ek photo lagayi
                         thi. Wo photo dekhkar mujhe aisa laga jaise humare beech koi
                         gehra connection hai.
@@ -131,7 +131,7 @@ const WeadingDetails = () => {
                 <div className="row">
                     <div className="col-sm-12">
                         <div className="heading">
-                            <span>We Love Each Other</span>
+
                             <h2 className="title">Our Story</h2>
                             <p>
                                 To love a person is to see all of their magic, and to remind them of it when they have

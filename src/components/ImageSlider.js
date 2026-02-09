@@ -1,32 +1,50 @@
 import React, { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import './ImageSlider.css';
-import sliding2 from '../images/sliding/sliding2.png';
+//import sliding2 from '../images/sliding/sliding2.png';
 import sliding3 from '../images/sliding/sliding3.png';
 import sliding4 from '../images/sliding/sliding4.png';
 import sliding5 from '../images/sliding/sliding5.png';
 import sliding8 from '../images/sliding/sliding8.jpg';
-import sliding10 from '../images/sliding/sliding10.jpg';
+//import sliding10 from '../images/sliding/sliding10.jpg';
 import sliding14 from '../images/sliding/sliding14.jpg';
-import matkor from '../images/sliding/matkor.jpeg';
+//import matkor from '../images/sliding/matkor.jpeg';
 import wedding1 from '../images/sliding/wedding1.jpeg';
 import wedding2 from '../images/sliding/wedding2.jpeg';
-import wedding3 from '../images/sliding/wedding3.jpeg';
+//import wedding3 from '../images/sliding/wedding3.jpeg';
+import sliding20 from '../images/sliding/sliding20.jpeg';
+import sliding22 from '../images/sliding/sliding22.jpeg';
+import sliding23 from '../images/sliding/sliding23.jpeg';
+import sliding24 from '../images/sliding/sliding24.jpeg';
+import sliding25 from '../images/sliding/sliding25.jpeg';
+import sliding27 from '../images/sliding/sliding27.jpeg';
+import sliding29 from '../images/sliding/sliding29.jpeg';
+
+
+
+
 
 const AUTO_INTERVAL_MS = 1500;
 
 export default function ImageSlider() {
   const images = useMemo(() => [
     wedding1,
-    wedding2,
-    wedding3,
-    matkor,
-    sliding2,
+    //wedding2,
+    //wedding3,
+    //matkor,
+    //sliding2,
     sliding3,
     sliding4,
     sliding5,
     sliding8,
-    sliding10,
+    //sliding10,
     sliding14,
+    sliding20,
+    sliding22,
+    sliding23,
+    sliding24,
+    sliding25,
+    sliding27,
+    sliding29,
   ], []);
 
   const [index, setIndex] = useState(0);

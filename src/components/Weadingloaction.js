@@ -13,25 +13,15 @@ const Weadingloaction = () => {
             // left
             inverted: false,
             image: img1,
-            title: 'Cheka',
+            title: 'Cheka (Tilak)',
             date: 'Monday, 23rd February 2026',
             time: '12:00 PM onwards',
             venue: 'Tajpur Saraiya, Tetaria',
         },
         {
-            key: 'mehendi',
-            // right
-            inverted: true,
-            image: mehendi1,
-            title: 'Mehendi',
-            date: 'Tuesday, 23rd February 2026',
-            time: '7:00 PM onwards',
-            venue: 'Paigambarpur, Muzaffarpur',
-        },
-        {
             key: 'matkor',
             // left
-            inverted: false,
+            inverted: true,
             image: img3,
             title: 'Puja Matkor',
             date: 'Tuesday, 24th February 2026',
@@ -41,11 +31,21 @@ const Weadingloaction = () => {
         {
             key: 'haldi',
             // right
-            inverted: true,
+            inverted: false,
             image: haldiImg,
             title: 'Haldi',
             date: 'Tuesday, 24th February 2026',
-            time: '7:00 PM onwards',
+            time: '8:00 PM onwards',
+            venue: 'Paigambarpur, Muzaffarpur',
+        },
+        {
+            key: 'mehendi',
+            // right
+            inverted: true,
+            image: mehendi1,
+            title: 'Mehendi',
+            date: 'Tuesday, 24th February 2026',
+            time: '9:00 PM onwards',
             venue: 'Paigambarpur, Muzaffarpur',
         },
         {
@@ -56,7 +56,7 @@ const Weadingloaction = () => {
             title: 'Wedding',
             date: 'Wednesday, 25th February 2026',
             time: '6:00 PM onwards',
-            venue: 'Tajpur Saraiya, Tetariya',
+            venue: 'Tajpur Saraiya, Tetaria',
         },
     ]), []);
 
